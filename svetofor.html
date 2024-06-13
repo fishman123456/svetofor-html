@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Светофор</title>
+  <style type="text/css">
+body > div{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: 2px solid  rgb(51, 0, 0);
+ }
+body.green div:nth-child(3){
+   opacity: 1 ;
+}
+
+body.yellow div:nth-child(2){
+   opacity: 1
+}
+body.red div:nth-child(1){
+   opacity: 1
+}
+
+body div:nth-child(3){
+   opacity: 0.2;  background: green;
+}
+
+body div:nth-child(2){
+   opacity: 0.2 ; background: yellow;
+}
+body div:nth-child(1){
+   opacity: 0.2  ; background: red;
+}
+  </style>
+    <script type="text/javascript">
+    function changeDiv (name){
+           document.body.className = name
+
+    }
+    </script>
+</head>
+<body class="green">
+
+<div align="center" id="closedred">
+
+</div>
+<div align="center" id="closedyellow">
+
+</div>
+<div align="center" id="closedgreen">
+
+</div>
+
+<table border=1 align=center><tr><td><form>
+    <input type=button value="Красный" onClick="changeDiv('red')">
+    <input type=button value="Желтый" onClick="changeDiv('yellow')">
+    <input type=button value="Зеленый" onClick="changeDiv('green')">
+</form></td></tr></table>
+
+
+</body>
+</html>
